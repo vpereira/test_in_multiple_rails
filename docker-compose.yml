@@ -2,21 +2,24 @@ version: "3.8"
 
 services:
   rails6.0:
-    command: tail -f /dev/null
+    command: rake test
+    # command: tail -f /dev/null
     build:
       dockerfile: Dockerfile60
       context: .
       args:
         RAILS_VERSION: 6.0.3.4
   rails6.1:
-    command: tail -f /dev/null
+    command: rake test
+    # command: tail -f /dev/null
     build:
       dockerfile: Dockerfile61
       context: .
       args:
         RAILS_VERSION: 6.1.0
   rails6.1.1:
-    command: tail -f /dev/null
+    command: rake test
+    # command: tail -f /dev/null
     build:
       dockerfile: Dockerfile61
       context: .
