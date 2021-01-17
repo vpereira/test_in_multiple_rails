@@ -12,5 +12,4 @@ COPY app/ app/
 COPY db/ db/
 COPY test/ test/
 
-
 RUN rails db:migrate
