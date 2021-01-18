@@ -1,5 +1,6 @@
 ### Reproducer infrastructure to test it with many rails versions
 
+![badge](https://github.com/vpereira/test_in_multiple_rails/workflows/tests/badge.svg)
 
 #### How to RUN it:
 
@@ -13,14 +14,13 @@ docker-compose build
 ##### Then run it:
 
 ```
-docker-compose run
+docker-compose up
 ```
 
-Now you have your containers running.
-
-To run the reproducer in different versions, one way to run it is with:
+It will run the same test suite in different configurations. If you want to
+inspect one specific container, i.e `rails6.0`, just launch a bash on that like:
 
 ```
-for d in rails6.0 rails6.1.1 rails6.1; do docker-compose exec $d rake test; done
+docker-compose run rails6.0 bash
 ```
 
